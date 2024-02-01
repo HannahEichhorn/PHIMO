@@ -2,5 +2,5 @@
 
 **Hannah Eichhorn**, Kerstin Hammernik, Veronika Spieker, Elisa Saks, Kilian Weiss, Christine Preibisch, Julia A. Schnabel
 
-Submitted to [ISMRM 2024](https://www.ismrm.org/24m/) | *Code will be published after acceptance*.
+Accepted at [ISMRM 2024](https://www.ismrm.org/24m/) as oral | *Code will be published soon*.
 
