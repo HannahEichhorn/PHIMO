@@ -32,7 +32,7 @@ If you use this code, please cite our preprint or abstract:
 ## Contents of this repository:
 
 - `ismrm-abstract`: code belonging to the ISMRM abstract
-- `miccai`: code belonging to the MICCAI paper - *Code will be published soon.*
+- `preprint`: code belonging to the preprint - *Code will be published soon.*
 
 All computations were performed using Python 3.8.12 and PyTorch 2.0.1, , using an adapted version of the [IML-CompAI Framework](https://github.com/compai-lab/iml-dl) and the [MERLIN Framework](https://github.com/midas-tum/merlin).
 
