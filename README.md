@@ -2,9 +2,9 @@
 
 **Hannah Eichhorn**, Veronika Spieker, Kerstin Hammernik, Elisa Saks, Kilian Weiss, Christine Preibisch, Julia A. Schnabel
 
-- Submitted to [MICCAI 2024](https://www.ismrm.org/24m/) | [preprint]()
+- Under review | [preprint](http://arxiv.org/abs/2403.08298)
 
-- Accepted at [ISMRM 2024](https://www.ismrm.org/24m/) | [abstract](https://www.ismrm.org/24/accepted_abstracts.pdf)
+- Accepted as oral at [ISMRM 2024](https://www.ismrm.org/24m/) | [abstract](https://www.ismrm.org/24/accepted_abstracts.pdf)
 
 
 
@@ -12,11 +12,12 @@
 If you use this code, please cite our preprint or abstract:
 
 ```
-@article{eichhorn2024miccai,
+@misc{eichhorn2024arxiv,
       title={Physics-Informed Deep Learning for Motion-Corrected Reconstruction of Quantitative Brain {MRI}}, 
-      author={Hannah Eichhorn and Veronika Spieker and Kerstin Hammernik and Elisa Sacks and Kilian Weiss and Christine Preibisch and Julia A. Schnabel},
-    journal={arXiv e-prints},
+      author={Hannah Eichhorn and Veronika Spieker and Kerstin Hammernik and Elisa Saks and Kilian Weiss and Christine Preibisch and Julia A. Schnabel},
       year={2024},
+      eprint={2403.08298},
+      archivePrefix={arXiv},
 }
 ```
 ```

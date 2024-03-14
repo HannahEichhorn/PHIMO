@@ -1,0 +1,102 @@
+name: Train_ISMRM_version
+train_batch_size: &tbatch_size 8
+downstream_batch_size: &dbatch_size 8
+select_echo: &select_echo False
+random_mask: &random_mask ["VarDensBlocks", 2, 3]
+#
+# Experiment
+#
+experiment:
+  name: ReconT2star_ISMRM-Submission
+  task: train
+  weights: # "\path_to_load_weights\" (optional)
+#
+device: gpu
+configurator:
+  module_name: core.Configurator
+  class_name: DLConfigurator
+  params:
+#
+# Model
+#
+model:
+  module_name: model_zoo.unrolled_recon
+  class_name: ComplexUnrolledNetwork
+  params:
+    nr_iterations: 10
+    dc_method: "GD"
+    denoiser_method: "Real2chCNN"
+    weight_sharing: False
+    select_echo: *select_echo
+    nr_filters: 64
+    kernel_size: 3
+    nr_layers: 5
+    activation: "relu"
+#
+# Trainer
+#
+trainer:
+  module_name: projects.recon_t2star.trainer
+  class_name: PTrainer
+  params:
+    checkpoint_path: "/path_to_save_weights/"
+    nr_epochs: 1200
+    patience: 1200
+    wandb_log_gradients: False
+    loss_domain: 'I'
+    # Loss
+    loss:
+      module_name: optim.losses.image_losses
+      class_name: SSIM
+      params:
+        select_echo: *select_echo
+    optimizer_params:
+      lr: 1.0e-4
+  # Data Loader
+  data_loader:
+    module_name: data.t2star_loader
+    class_name: RawT2starLoader
+    params:
+      args:
+        batch_size: *tbatch_size
+        data_dir:
+          train: './data/links_to_data/recon_train_WS/'
+          val: './data/links_to_data/recon_val_WS/'
+          test: './data/links_to_data/recon_val_WS/'
+        only_brainmask_slices: True
+        bm_thr: 0.1
+        normalize: "abs_image"
+        select_echo: *select_echo
+        random_mask: *random_mask
+#
+# Downstream tasks
+#
+downstream_tasks:
+  T2StarReconstruction:
+    module_name: projects.recon_t2star.downstream_evaluator
+    class_name: PDownstreamEvaluator
+    checkpoint_path: "/path_to_save_downstream_results/"
+    params:
+      task: "recon"
+      include_brainmask: True
+    data_loader:
+      module_name: data.t2star_loader
+      class_name: RawT2starLoader
+      params:
+        args:
+          batch_size: *dbatch_size
+          only_brainmask_slices: True
+          bm_thr: 0.1
+          normalize: "abs_image"
+          select_echo: *select_echo
+          random_mask: *random_mask
+      datasets:
+        train:
+          data_dir:
+            test: './data/links_to_data/recon_train_WS/'
+        val:
+          data_dir:
+            test: './data/links_to_data/recon_val_WS/'
+       test:
+         data_dir:
+           test: './data/links_to_data/recon_train_WS_single/'

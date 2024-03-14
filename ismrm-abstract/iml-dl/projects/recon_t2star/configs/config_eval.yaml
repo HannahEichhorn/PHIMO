@@ -1,0 +1,6 @@
+run_id: "wandb-run-id"
+checkpoint_path: "path_to_downstream_results"
+in_folder: "path_to/PHIMO/ismrm-abstract/iml-dl/data/links_to_data/"
+dataset: "recon_test_motion_WS/"
+load_original: False
+sorted_keys: ['uncorr', 'moco_mean-1000', 'moco_best-1000', 'rdcorr']
