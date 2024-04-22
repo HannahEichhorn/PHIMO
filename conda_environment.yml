@@ -1,4 +1,4 @@
-name: ismrm_2024
+name: phimo
 channels:
   - nvidia
   - conda-forge

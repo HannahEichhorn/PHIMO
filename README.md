@@ -4,7 +4,7 @@
 
 - Under review | [preprint](http://arxiv.org/abs/2403.08298)
 
-- Accepted as oral at [ISMRM 2024](https://www.ismrm.org/24m/) | [abstract](https://www.ismrm.org/24/accepted_abstracts.pdf)
+- Accepted as oral at [ISMRM 2024](https://www.ismrm.org/24m/) | [abstract](https://submissions.mirasmart.com/ISMRM2024/Itinerary/PresentationDetail.aspx?evdid=2586)
 
 
 
@@ -43,7 +43,7 @@ All computations were performed using Python 3.8.12 and PyTorch 2.0.1, , using a
     ```
     cd ${TARGET_DIR}/PHIMO
     conda env create -f conda_environment.yml
-    source activate ismrm_2024 *or* conda activate ismrm_2024
+    source activate phimo *or* conda activate phimo
     ```
 
 2. Install pytorch with cuda:
