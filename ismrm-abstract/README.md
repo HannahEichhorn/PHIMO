@@ -2,7 +2,7 @@
 
 **Hannah Eichhorn**, Kerstin Hammernik, Veronika Spieker, Elisa Saks, Kilian Weiss, Christine Preibisch, Julia A. Schnabel
 
-Accepted at [ISMRM 2024](https://www.ismrm.org/24m/).
+Accepted as oral at [ISMRM 2024](https://submissions.mirasmart.com/ISMRM2024/Itinerary/PresentationDetail.aspx?evdid=2586).
 
 
 **Synopsis:** 
