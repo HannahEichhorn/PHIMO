@@ -2,14 +2,14 @@
 
 **Hannah Eichhorn**, Veronika Spieker, Kerstin Hammernik, Elisa Saks, Kilian Weiss, Christine Preibisch, Julia A. Schnabel
 
-- Under review | [preprint](http://arxiv.org/abs/2403.08298)
+- Accepted at [MICCAI 2024](https://conferences.miccai.org/2024/) | [preprint](http://arxiv.org/abs/2403.08298)
 
 - Accepted as oral at [ISMRM 2024](https://www.ismrm.org/24m/) | [abstract](https://submissions.mirasmart.com/ISMRM2024/Itinerary/PresentationDetail.aspx?evdid=2586)
 
 
 
 ## Citation
-If you use this code, please cite our preprint or abstract:
+If you use this code, please cite our paper or abstract:
 
 ```
 @misc{eichhorn2024arxiv,
@@ -32,7 +32,7 @@ If you use this code, please cite our preprint or abstract:
 ## Contents of this repository:
 
 - `ismrm-abstract`: code belonging to the ISMRM abstract
-- `preprint`: code belonging to the preprint - *Code will be published soon.*
+- `miccai`: code belonging to the MICCAI paper.
 
 All computations were performed using Python 3.8.12 and PyTorch 2.0.1, , using an adapted version of the [IML-CompAI Framework](https://github.com/compai-lab/iml-dl) and the [MERLIN Framework](https://github.com/midas-tum/merlin).
 
